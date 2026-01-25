@@ -26,4 +26,12 @@ return {
     },
     -- lazy = false,
     priority = 100,
+    config = function(_, opts)
+        local uname = (vim.uv or vim.loop).os_uname()
+        if uname.sysname == "Windows_NT" then
+            -- 添加 Windows 下的配置文件路径
+            table.insert(opts.projects, "~\\AppData\\Local\\nvim")
+        end
+        require("neovim-project").setup(opts)
+    end,
 }
