@@ -4,8 +4,8 @@ return {
     event = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
-        { "<C-l>", "<cmd>BufferLineCycleNext<CR>", mode = { "n", "i" }, desc = "Move to next buffer" },
-        { "<C-h>", "<cmd>BufferLineCyclePrev<CR>", mode = { "n", "i" }, desc = "Move to previous buffer" },
+        { "<C-l>", "<Cmd>BufferLineCycleNext<CR>", mode = { "n", "i" }, desc = "Move to next buffer" },
+        { "<C-h>", "<Cmd>BufferLineCyclePrev<CR>", mode = { "n", "i" }, desc = "Move to previous buffer" },
     },
     opts = {
         options = {

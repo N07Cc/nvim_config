@@ -35,17 +35,17 @@ return {
             preset = {
                 -- stylua: ignore start
                 keys = {
-                    { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-                    { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-                    { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-                    { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+                    { icon = " ", key = "f", desc = "Find File", action = "<Cmd>lua Snacks.dashboard.pick('files')<CR>" },
+                    { icon = " ", key = "n", desc = "New File", action = "<Cmd>ene | startinsert<CR>" },
+                    { icon = " ", key = "g", desc = "Find Text", action = "<Cmd>lua Snacks.dashboard.pick('live_grep')<CR>" },
+                    { icon = " ", key = "r", desc = "Recent Files", action = "<Cmd>lua Snacks.dashboard.pick('oldfiles')<CR>" },
                     -- { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
                     { icon = " ", key = "c", desc = "Config", action = open_config_with_project },
-                    { icon = " ", key = "p", desc = "Projects", action = ":NeovimProjectDiscover history" },
+                    { icon = " ", key = "p", desc = "Projects", action = "<Cmd>NeovimProjectDiscover history<CR>" },
                     -- { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-                    { icon = " ", key = "s", desc = "Restore Session", action=":NeovimProjectLoadRecent" },
-                    { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
-                    { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+                    { icon = " ", key = "s", desc = "Restore Session", action="<Cmd>NeovimProjectLoadRecent<CR>" },
+                    { icon = "󰒲 ", key = "L", desc = "Lazy", action = "<Cmd>Lazy<CR>", enabled = package.loaded.lazy ~= nil },
+                    { icon = " ", key = "q", desc = "Quit", action = "<Cmd>qa<CR>" },
                 },
                 -- stylua: ignore end
             },

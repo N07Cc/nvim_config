@@ -11,7 +11,7 @@ vim.keymap.set({ "i", "c" }, "<C-S-V>", "<C-R>+", base_opts)
 vim.keymap.set({ "n", "v" }, "<C-S-V>", '"*p', base_opts)
 
 -- 基础操作映射
-vim.keymap.set({ "n" }, "<leader>s", "<cmd>w<CR>", base_opts)
+vim.keymap.set({ "n" }, "<leader>s", "<Cmd>w<CR>", base_opts)
 -- vim.keymap.set({ "n" }, "<leader>q", "<cmd>bd<CR>", base_opts)
 
 -- Save session and files and quit.
@@ -50,5 +50,5 @@ vim.keymap.set({ "n" }, "<leader>w", "<C-w>", base_opts)
 -- end, opts_with_desc("Use window-picker to pick a window, or fallback to `wincmd w`"))
 
 -- tab操作
-vim.keymap.set({ "n" }, "<C-L>", "<cmd>tabnext<CR>", base_opts)
-vim.keymap.set({ "n" }, "<C-H>", "<cmd>tabprevious<CR>", base_opts)
+vim.keymap.set({ "n" }, "<C-L>", "<Cmd>tabnext<CR>", base_opts)
+vim.keymap.set({ "n" }, "<C-H>", "<Cmd>tabprevious<CR>", base_opts)

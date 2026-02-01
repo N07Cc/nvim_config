@@ -13,7 +13,7 @@ return {
         },
     },
     keys = {
-        { "<leader>fP", "<cmd>NeovimProjectDiscover<CR>", desc = "Projects" },
+        { "<leader>fP", "<Cmd>NeovimProjectDiscover<CR>", desc = "Projects" },
     },
     init = function()
         -- enable saving the state of plugins in the session
