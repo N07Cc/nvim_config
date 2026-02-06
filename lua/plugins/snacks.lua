@@ -64,7 +64,7 @@ return {
         picker = { enabled = true },
         notifier = {
             enabled = true,
-            timeout = 2000,
+            timeout = 1000,
         },
         -- quickfile = { enabled = true },
         scope = { enabled = true },
@@ -147,7 +147,7 @@ return {
         { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
         -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
         { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-        { "<C-t>", function() Snacks.terminal.toggle() end, desc = "Toggle Terminal" },
+        { "<C-t>", function() Snacks.terminal.toggle() end, desc = "Toggle Terminal", mode={"n", "t"} },
         { "<leader>t", function() Snacks.terminal.toggle() end, desc = "Toggle Terminal" },
         -- { "<c-_>", function() Snacks.terminal() end, desc = "which_key_ignore" },
         { "]]", function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
