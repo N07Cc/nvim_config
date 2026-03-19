@@ -1,8 +1,8 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    version = false, -- last release is way too old and doesn't work on Windows
+    branch = "master",
+    lazy = false,
     build = ":TSUpdate",
-    event = "VeryLazy",
     opts = {
         highlight = {
             enable = true,
@@ -16,7 +16,7 @@ return {
         },
         indent = { enable = true },
         autopairs = { enable = true },
-        auto_install = false,
+        auto_install = true,
         ensure_installed = {
             "bash",
             "c",
@@ -60,4 +60,7 @@ return {
             },
         },
     },
+    config = function(_, opts)
+        require("nvim-treesitter.configs").setup(opts)
+    end,
 }
