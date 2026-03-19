@@ -2,9 +2,6 @@
 
 vim.g.mapleader = " "
 
--- Shell
-vim.o.shell = "/usr/sbin/fish"
-
 -- vim.opt.clipboard = 'unnamedplus' -- use system clipboard
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.mouse = "a" -- allow the mouse to be used in nvim
@@ -29,3 +26,24 @@ vim.opt.incsearch = true -- search as characters are entered
 vim.opt.hlsearch = false -- do not highlight matches
 vim.opt.ignorecase = true -- ignore case in searches by default
 vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entered
+
+-- Shell
+if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
+    -- Windows
+    if vim.fn.executable("nu") == 1 then
+        vim.o.shell = "nu"
+    elseif vim.fn.executable("pwsh") == 1 then
+        vim.o.shell = "pwsh.exe"
+    else
+        vim.o.shell = "powershell.exe"
+    end
+else
+    -- Assume Unix-like (Linux, macOS, etc.)
+    if vim.fn.executable("fish") == 1 then
+        vim.o.shell = "fish"
+    elseif vim.fn.executable("zsh") == 1 then
+        vim.o.shell = "zsh"
+    else
+        vim.o.shell = "bash"
+    end
+end
